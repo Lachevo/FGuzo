@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" role="img" aria-labelledby="title">
+  <title id="title">FastGuzo logo</title>
+  <rect x="0" y="0" width="24" height="24" rx="5" ry="5" fill="#2563EB" />
+  <path d="M2 12l20-8-8 20-4-8-8-4z" fill="#FFFFFF"/>
+</svg>

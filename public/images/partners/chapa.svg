@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80" role="img" aria-label="Chapa logo">
+  <title>Chapa</title>
+  <!-- stylized mark + wordmark approximating the provided attachment -->
+  <g transform="translate(12,8)">
+    <path d="M28 12c7 0 16-2 21 5 5 7 0 17-9 21-7 3-16 0-23-5-7-5-9-16-4-22 4-5 8-7 15-7z" fill="#7ED957"/>
+    <path d="M60 6c5 0 9 4 9 9v28c0 5-4 9-9 9H42" fill="#66D044" opacity="0.95"/>
+  </g>
+  <!-- wordmark -->
+  <g transform="translate(100,52)">
+    <text x="0" y="0" font-family="Segoe UI, Roboto, Arial, sans-serif" font-size="26" fill="#66D044" font-weight="700">Chapa</text>
+  </g>
+</svg>
