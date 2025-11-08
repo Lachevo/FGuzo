@@ -23,9 +23,10 @@ export default function Testimonials() {
 
     const ctx = gsap.context(() => {
       const cards = gsap.utils.toArray(".testimonial-card")
+      // animate vertical entrance but do not touch opacity — framer-motion handles opacity
       gsap.from(cards, {
         y: 30,
-        opacity: 0,
+        // keep opacity alone to framer-motion so GSAP doesn't leave cards invisible if trigger misses
         stagger: 0.12,
         duration: 0.8,
         ease: "power3.out",

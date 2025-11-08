@@ -36,8 +36,15 @@ export default function Header() {
             <img
               src="/images/primary-logo-colored.png"
               alt="FastGuzo Logo"
-              className="h-10 md:h-12 w-auto"
+              className="h-8 md:h-12 w-auto"
             />
+          </a>
+          {/* Certification badge (links to Affiliations & Recognitions) - visible on mobile too */}
+          <a href="#affiliations" onClick={(e) => scrollTo(e, "affiliations", "Affiliations")} className="inline-flex items-center ml-3 px-2 py-0.5 rounded-md bg-blue-50 hover:bg-blue-100 text-xs text-blue-600" aria-label="Affiliations & Recognitions">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 mr-2" fill="none" stroke="currentColor">
+              <path d="M12 2l3 3 5 1-1 5 3 3-3 3-3 1-2 3-2-3-3-1-3-3 3-3-1-5 5-1 3-3z" strokeWidth=".8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span className="truncate">Certified</span>
           </a>
 
           {/* Desktop Navigation Links */}

@@ -1,32 +1,29 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 export default function Services() {
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    setIsVisible(true)
-  }, [])
 
   const services = [
     {
-      icon: "📚",
-      title: "Visa & Application Assistance",
-      description:
-        "Our visa experts guide you through the paperwork, ensuring your application is flawless and ready for approval.",
+      key: "student",
+      title: "Student Visa",
+      description: "End-to-End support to students for making a well-informed career decision of studying abroad.",
     },
     {
-      icon: "💰",
-      title: "Scholarship & Financial Aid",
-      description:
-        "We help you find scholarships and financial aid opportunities that make your dream education affordable.",
+      key: "tourist",
+      title: "Tourists Visa",
+      description: "Seamless assistance for travelers in obtaining a tourist visa for hassle-free international trips.",
     },
     {
-      icon: "✈️",
-      title: "Flight Bookings & Coordination",
-      description:
-        "We make sure your flights are booked quickly and at competitive rates, helping you save time and money.",
+      key: "permanent",
+      title: "Permanent Residency",
+      description: "Guiding individuals through the process of obtaining permanent residency for a secure future abroad.",
+    },
+    {
+      key: "work",
+      title: "Work Visa",
+      description: "Comprehensive support for professionals seeking international work opportunities through a seamless process.",
     },
   ]
 
@@ -34,51 +31,52 @@ export default function Services() {
     <section className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-semibold text-sm uppercase mb-3">Get to know us</p>
+          <p className="text-blue-600 font-semibold text-sm uppercase mb-3">how we help clients</p>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Your Trusted Partner for
+            Level with great visa serving
+
             <br />
-            Education and Visa Solutions
+            policies
           </h2>
         </div>
 
-        {/* Highlights */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          <div className="space-y-2">
-            <p className="text-3xl font-bold text-blue-600">98%</p>
-            <p className="text-slate-600">and above success rates</p>
-          </div>
-          <div className="space-y-2">
-            <p className="text-3xl font-bold text-blue-600">✓</p>
-            <p className="text-slate-600">Trusted Expertise</p>
-          </div>
-          <div className="space-y-2">
-            <p className="text-3xl font-bold text-blue-600">✓</p>
-            <p className="text-slate-600">Proven Results</p>
-          </div>
-          <div className="space-y-2">
-            <p className="text-3xl font-bold text-blue-600">✓</p>
-            <p className="text-slate-600">Comprehensive, End-to-End Support</p>
-          </div>
-        </div>
+        {/* Services Cards */}
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          {services.map((service, index) => {
+            return (
+              <motion.article
+                key={service.key}
+                className="group p-8 rounded-xl shadow-sm border transition-all duration-300 transform bg-white text-slate-700 border-slate-100 hover:shadow-lg hover:-translate-y-2 hover:bg-blue-600 hover:text-white hover:border-blue-600"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`bg-blue-600 text-white group-hover:bg-white group-hover:text-blue-600 w-12 h-12 rounded-full flex items-center justify-center shadow-sm shrink-0`}>
+                    {/* simple icon: paper plane */}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-current">
+                      <path fill="currentColor" d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+                    </svg>
+                  </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-blue-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 cursor-pointer transform ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-              }`}
-              style={{
-                transitionDelay: `${index * 150}ms`,
-              }}
-            >
-              <p className="text-4xl mb-4">{service.icon}</p>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{service.description}</p>
-            </div>
-          ))}
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-white">{service.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-slate-600 group-hover:text-white/90">{service.description}</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 border-t pt-4">
+                  <a className="text-blue-600 hover:text-blue-700 group-hover:text-white inline-flex items-center gap-2 text-sm font-medium" href="#">
+                    Learn More
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-current">
+                      <path fill="currentColor" d="M10 17l5-5-5-5v10z" />
+                    </svg>
+                  </a>
+                </div>
+              </motion.article>
+            )
+          })}
         </div>
       </div>
     </section>

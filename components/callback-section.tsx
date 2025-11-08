@@ -62,11 +62,11 @@ export default function CallbackSection() {
   ]
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-slate-50 via-blue-50/30 to-white relative overflow-hidden">
+  <section id="contact" className="py-24 pb-32 md:pb-24 pr-20 md:pr-0 bg-gradient-to-b from-slate-50 via-blue-50/30 to-white relative overflow-hidden">
       {/* Modern background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="hidden sm:block absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
+        <div className="hidden sm:block absolute bottom-0 left-0 w-96 h-96 bg-slate-100 rounded-full opacity-20 blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -74,8 +74,7 @@ export default function CallbackSection() {
         <div className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
           >
@@ -121,8 +120,7 @@ export default function CallbackSection() {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.blockquote
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
             className="text-2xl md:text-3xl lg:text-4xl font-medium text-slate-800 italic mb-8 leading-relaxed"
           >
@@ -131,8 +129,7 @@ export default function CallbackSection() {
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
@@ -156,14 +153,13 @@ export default function CallbackSection() {
 
         {/* Contact Form Section */}
         <div id="contact-form" className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-100">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-12 border border-slate-100">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-start">
               {/* Left Content */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={isVisible ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Request a Call Back</h2>
                 <p className="text-lg text-slate-600 mb-8">Feel free to let us call you back. We're here to help.</p>
@@ -207,10 +203,9 @@ export default function CallbackSection() {
               {/* Right - Form */}
               <motion.form
                 onSubmit={handleSubmit}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={isVisible ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5 }}
                 className="space-y-5"
               >
                 <div>

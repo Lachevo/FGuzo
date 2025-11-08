@@ -1,54 +1,16 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import { CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 export default function GetToKnowUs() {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const imageRef = useRef<HTMLDivElement | null>(null)
   const contentRef = useRef<HTMLDivElement | null>(null)
 
-  useEffect(() => {
-    if (typeof window === "undefined") return
-    gsap.registerPlugin(ScrollTrigger)
-
-    const ctx = gsap.context(() => {
-      // Image animation with more movement
-      if (imageRef.current) {
-        gsap.from(imageRef.current, {
-          x: -80,
-          opacity: 0,
-          scale: 0.95,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: "top 80%",
-          },
-        })
-      }
-
-      // Content animation with more movement
-      if (contentRef.current) {
-        gsap.from(contentRef.current, {
-          x: 80,
-          opacity: 0,
-          scale: 0.95,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: contentRef.current,
-            start: "top 80%",
-          },
-        })
-      }
-    }, containerRef)
-
-    return () => ctx.revert()
-  }, [])
+  // Removed GSAP scroll-triggered animations to avoid conflicts with Framer Motion
+  // Framer Motion handles whileInView animations reliably across desktop and mobile.
 
   const benefits = [
     "95% and above success rates",
@@ -72,7 +34,7 @@ export default function GetToKnowUs() {
             <div className="relative">
               <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl relative">
                 <img
-                  src="/images/students.jpg"
+                  src="/images/get-to-know-us.jpg"
                   alt="Travel consultants helping a student"
                   className="w-full h-full object-cover"
                   loading="lazy"

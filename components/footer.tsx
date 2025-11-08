@@ -13,6 +13,12 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img src="/images/primary-logo-colored.png" alt="FastGuzo logo" className="h-16 block" />
+            <div className="mt-3 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor">
+                <path d="M12 2l3 3 5 1-1 5 3 3-3 3-3 1-2 3-2-3-3-1-3-3 3-3-1-5 5-1 3-3z" strokeWidth=".8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <a href="#certification" className="text-sm text-slate-700 hover:text-blue-600">Certified by Canada Immigration Office</a>
+            </div>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed">
               Call or email us today to schedule a free consultation. Let us discuss your goals and how we can make them

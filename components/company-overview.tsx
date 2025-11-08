@@ -1,10 +1,75 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Award, Users, FileCheck, Plane, GraduationCap, Sparkles, CheckCircle2, Hotel, BookOpen } from "lucide-react"
 import { motion } from "framer-motion"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+
+// AnimatedNumber: small client-side count-up that starts when scrolled into view
+function AnimatedNumber({
+  target,
+  suffix = "",
+  duration = 1400,
+  className = "",
+}: {
+  target: number
+  suffix?: string
+  duration?: number
+  className?: string
+}) {
+  const ref = useRef<HTMLSpanElement | null>(null)
+  const [value, setValue] = useState(0)
+  const [started, setStarted] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    if (started) return
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !started) {
+            setStarted(true)
+            const startTime = performance.now()
+            const from = 0
+            const to = target
+
+            const easeOutQuad = (t: number) => t * (2 - t)
+
+            function tick(now: number) {
+              const elapsed = now - startTime
+              const progress = Math.min(elapsed / duration, 1)
+              const eased = easeOutQuad(progress)
+              const current = Math.round(from + (to - from) * eased)
+              setValue(current)
+              if (progress < 1) {
+                requestAnimationFrame(tick)
+              } else {
+                setValue(to)
+                obs.disconnect()
+              }
+            }
+
+            requestAnimationFrame(tick)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [target, duration, started])
+
+  return (
+    <span ref={ref} className={className}>
+      {value.toLocaleString()}
+      {suffix}
+    </span>
+  )
+}
 
 export default function CompanyOverview() {
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -114,12 +179,12 @@ export default function CompanyOverview() {
               can focus on the experience.
             </p>
 
-            {/* Stats */}
+            {/* Stats with animated count-up */}
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Award className="w-6 h-6 text-blue-600" />
-                  <p className="text-3xl font-bold text-blue-600">7+</p>
+                  <AnimatedNumber className="text-3xl font-bold text-blue-600" target={7} suffix="+" />
                 </div>
                 <p className="text-slate-600 font-medium">Best Award</p>
                 <p className="text-sm text-slate-500">Recognized for excellence</p>
@@ -127,7 +192,7 @@ export default function CompanyOverview() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Users className="w-6 h-6 text-blue-600" />
-                  <p className="text-3xl font-bold text-blue-600">500+</p>
+                  <AnimatedNumber className="text-3xl font-bold text-blue-600" target={500} suffix="+" />
                 </div>
                 <p className="text-slate-600 font-medium">Happy Clients</p>
                 <p className="text-sm text-slate-500">Trusted by thousands</p>
