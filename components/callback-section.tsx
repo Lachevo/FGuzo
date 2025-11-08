@@ -62,14 +62,14 @@ export default function CallbackSection() {
   ]
 
   return (
-  <section id="contact" className="py-24 pb-32 md:pb-24 pr-20 md:pr-0 bg-gradient-to-b from-slate-50 via-blue-50/30 to-white relative overflow-hidden">
+  <section id="contact" className="py-24 pb-32 md:pb-24 pr-4 md:pr-0 bg-gradient-to-b from-slate-50 via-blue-50/30 to-white relative overflow-hidden">
       {/* Modern background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="hidden sm:block absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
         <div className="hidden sm:block absolute bottom-0 left-0 w-96 h-96 bg-slate-100 rounded-full opacity-20 blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Features Grid */}
         <div className="mb-20">
           <motion.div
@@ -152,8 +152,8 @@ export default function CallbackSection() {
         </div>
 
         {/* Contact Form Section */}
-        <div id="contact-form" className="max-w-5xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-12 border border-slate-100">
+  <div id="contact-form" className="max-w-full md:max-w-5xl mx-0 md:mx-auto">
+    <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-12 border border-slate-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-start">
               {/* Left Content */}
               <motion.div
