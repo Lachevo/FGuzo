@@ -133,9 +133,9 @@ export default function CompanyOverview() {
       bgColor: "bg-green-50",
     },
     {
-      title: "Flight & Accommodation",
-      stat: "Best rates",
-      icon: "�",
+      title: "Visa & Documentation",
+      stat: "Comprehensive",
+      icon: BookOpen,
     },
     {
       title: "Student Support",
@@ -156,8 +156,8 @@ export default function CompanyOverview() {
       </div>
       <div ref={floatBadgeRef} className="absolute right-10 bottom-10 p-4 bg-white/95 backdrop-blur-sm text-sm text-slate-900 rounded-xl shadow-lg border border-slate-200 pointer-events-none z-10">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-blue-600" />
-          <span className="font-semibold">Travel with Confidence</span>
+            <Sparkles className="w-4 h-4 text-blue-600" />
+          <span className="font-semibold">Global Immigration Services</span>
         </div>
       </div>
       <div ref={containerRef} className="max-w-7xl mx-auto px-4">
@@ -171,12 +171,12 @@ export default function CompanyOverview() {
           >
             <p className="text-blue-600 font-semibold text-sm uppercase mb-3">Company Overview</p>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Travel Smarter, Travel Faster with FastGuzo
+              Immigrate Smarter, Settle Faster with FastGuzo
             </h2>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              FastGuzo combines local expertise and global partners to make your journey seamless. From visa support and
-              flight bookings to student relocation and travel insurance, our dedicated team handles the details so you
-              can focus on the experience.
+              FastGuzo combines local expertise and trusted partners to make your immigration process smooth. From visa
+              applications and document preparation to pre-departure support and settlement guidance, our dedicated team
+              handles the details so you can focus on the next chapter.
             </p>
 
             {/* Stats with animated count-up */}
@@ -210,9 +210,9 @@ export default function CompanyOverview() {
             {/* Office Image */}
             <div className="mb-8">
               <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="/images/office.jpg"
-                  alt="Travel agency office"
+                  <img
+                  src="/images/image5.jpg"
+                  alt="Immigration consultancy office"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -223,7 +223,7 @@ export default function CompanyOverview() {
 
             {/* Services Showcase */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Smart travel experience for you!</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Smart immigration experience for you!</h3>
               {services.map((service, index) => {
                 // Use Plane icon if icon is not a valid component
                 const IconComponent = typeof service.icon === 'function' ? service.icon : Plane

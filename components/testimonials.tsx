@@ -57,7 +57,7 @@ export default function Testimonials() {
     {
       text: "FastGuzo helped me through the entire visa process — fast, clear, and professional. I couldn't be happier.",
       author: "Kebash Tadesse",
-      role: "Student",
+      role: "client",
       image: "/images/avatar1.jpg",
       rating: 5,
     },
@@ -76,7 +76,7 @@ export default function Testimonials() {
       rating: 5,
     },
     {
-      text: "The team at FastGuzo made my study abroad journey seamless. Their expertise and attention to detail are unmatched.",
+      text: "The team at FastGuzo made my immigration application process seamless. Their expertise and attention to detail are unmatched.",
       author: "Yonas Getachew",
       role: "Graduate Student",
       image: "/images/avatar1.jpg",
@@ -85,7 +85,7 @@ export default function Testimonials() {
     {
       text: "I was impressed by how quickly FastGuzo processed my visa application. Professional service from start to finish.",
       author: "Hanna Tesfaye",
-      role: "Traveler",
+      role: "Applicant",
       image: "/images/avatar2.jpg",
       rating: 5,
     },

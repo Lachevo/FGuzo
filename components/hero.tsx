@@ -77,13 +77,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className={`transition-all duration-1000 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
         >
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-4">Discover the world your way.</p>
+          <p className="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-4">Trusted immigration guidance.</p>
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             FastGuzo
           </h1>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            FastGuzo makes international travel simple and reliable — flights, visas, and end-to-end support for
-            students and travelers. Personalized service, competitive pricing, and local expertise.
+            FastGuzo provides expert immigration consultancy — visa applications, documentation guidance, and
+            end-to-end support for students, families, and skilled migrants. Personalized advice and local expertise to help you move with confidence.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 transition-all hover:shadow-lg hover:scale-105">
             GET STARTED

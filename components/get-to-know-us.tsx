@@ -34,8 +34,8 @@ export default function GetToKnowUs() {
             <div className="relative">
               <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl relative">
                 <img
-                  src="/images/get-to-know-us.jpg"
-                  alt="Travel consultants helping a student"
+                  src="/images/image3.jpg"
+                  alt="Immigration consultants helping a client"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -57,7 +57,7 @@ export default function GetToKnowUs() {
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Your Trusted Partner for
               <br />
-              Education and Visa Solutions
+                Visa Solutions
             </h2>
 
             {/* Benefits List */}
@@ -78,7 +78,7 @@ export default function GetToKnowUs() {
             </div>
 
             <p className="text-slate-600 leading-relaxed">
-              When you work with us, you're not just booking a trip; you're taking a step toward realizing your dreams.
+              When you work with us, you're not just submitting an application; you're taking a step toward a new life abroad.
             </p>
           </motion.div>
         </div>

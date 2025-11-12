@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'FastGuzo',
-  description: 'FastGuzo makes international travel simple and reliable — flights, visas, and end-to-end support for students and travelers. Personalized service, competitive pricing, and local expertise.',
+  description: 'FastGuzo is a trusted immigration consultancy — visas, applications, and end-to-end immigration support for students, families, and skilled migrants. Personalized guidance, expert documentation assistance, and local expertise.',
   generator: 'FastGuzo',
 }
 

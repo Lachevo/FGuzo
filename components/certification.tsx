@@ -21,24 +21,24 @@ export default function Certification() {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-xl font-semibold text-slate-900">Official Certification — Canada Immigration Office</h3>
+            <h3 className="text-xl font-semibold text-slate-900">Official Certification — Canada & International Partners</h3>
             <p className="mt-3 text-slate-700 leading-relaxed text-sm md:text-base">
-              We are proud to announce that our travel agency has been officially certified by the Canada Immigration
+              We are proud to announce that our immigration consultancy has been officially certified by the Canada Immigration
               Office, recognizing our dedication to providing trusted and professional immigration services. This
-              certification allows us to assist clients with complete confidence as they plan their journeys to Canada—whether
-              for travel, study, work, or permanent settlement.
+              certification allows us to assist clients with complete confidence as they plan their immigration pathways to Canada—whether
+              for study, work, family reunification, or permanent settlement.
             </p>
 
             <p className="mt-3 text-slate-700 leading-relaxed text-sm md:text-base">
               Our team of experienced consultants is committed to guiding you through every step of the immigration process,
-              from visa applications and document preparation to travel arrangements and post-arrival support. With this
+              from visa applications and document preparation to settlement and post-arrival support. With this
               recognition, we continue to uphold the highest standards of integrity, transparency, and care, ensuring that
               your Canadian dream begins with a trusted and certified partner.
             </p>
 
             <div className="mt-4 flex items-center gap-3">
               <a
-                href="#callback"
+                href="#contact"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium shadow"
               >
                 Contact our certified team

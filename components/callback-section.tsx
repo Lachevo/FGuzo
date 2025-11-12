@@ -42,15 +42,15 @@ export default function CallbackSection() {
 
   const features = [
     {
-      image: "/images/about1.jpg",
+      image: "/images/image6.jpg",
       title: "Expert Guidance",
     },
     {
-      image: "/images/about2.jpg",
+      image: "/images/globalReach.jpg",
       title: "Global Reach",
     },
     {
-      image: "/images/about3.jpg",
+      image: "/images/trust.jpg",
       title: "Trusted Service",
     },
     {
@@ -124,7 +124,7 @@ export default function CallbackSection() {
             transition={{ duration: 0.6 }}
             className="text-2xl md:text-3xl lg:text-4xl font-medium text-slate-800 italic mb-8 leading-relaxed"
           >
-            "With FastGuzo, every journey is more than a trip — it's an experience."
+            "With FastGuzo, every immigration plan is handled with expertise and care."
           </motion.blockquote>
 
           <motion.div
@@ -134,7 +134,7 @@ export default function CallbackSection() {
             className="space-y-6"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              Ready to start your next journey?
+              Ready to start your immigration application?
             </h2>
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -58,10 +58,9 @@ export default function About() {
         <div ref={titleRef} className="mx-auto max-w-3xl text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">About Us</h2>
           <p className="mt-4 text-slate-600">
-            Welcome to FastGuzo, your trusted partner in creating unforgettable travel experiences. We're more than
-            just a travel agency — we're your guide to exploring the world with ease, comfort, and confidence. Whether
-            you're planning a weekend getaway, a family vacation, or a business trip, FastGuzo helps you reach your
-            destination faster and smarter.
+            Welcome to FastGuzo, your trusted immigration consultancy. We're more than an agency — we provide expert
+            guidance through visa applications, documentation, and settlement planning. Whether you're studying abroad,
+            relocating for work, or seeking family reunification, FastGuzo helps you plan and move forward with confidence.
           </p>
         </div>
 
@@ -77,9 +76,9 @@ export default function About() {
               <h3 className="text-lg font-semibold">Our Mission</h3>
             </div>
             <p className="text-slate-600">
-              To make travel simple, accessible, and enjoyable for everyone. At FastGuzo, our mission is to connect
-              people with the world by offering affordable, reliable, and personalized travel solutions — helping you
-              plan, book, and explore without stress.
+              To make immigration simple, accessible, and reliable for everyone. At FastGuzo, our mission is to connect
+              people with opportunities abroad by offering professional, transparent, and personalized immigration services —
+              helping you prepare applications and settle confidently.
             </p>
           </div>
 
@@ -94,9 +93,8 @@ export default function About() {
               <h3 className="text-lg font-semibold">Our Vision</h3>
             </div>
             <p className="text-slate-600">
-              To become Africa's most trusted and innovative travel agency, inspiring a new generation of explorers who
-              travel not just to see places, but to experience life. We envision a world where every journey begins with
-              FastGuzo.
+              To become Africa's most trusted immigration consultancy, inspiring confidence in applicants and families
+              seeking a better future abroad. We envision a world where every application is supported by expertise and care.
             </p>
           </div>
 
@@ -126,7 +124,7 @@ export default function About() {
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
                 <span>
-                  <strong>Innovation:</strong> We use technology to make travel faster and easier.
+                  <strong>Innovation:</strong> We use technology to make immigration faster and easier.
                 </span>
               </li>
             </ul>
@@ -139,11 +137,11 @@ export default function About() {
             <ul className="space-y-3 text-slate-600">
               <li className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                <span>Seamless booking and travel planning</span>
+                <span>Seamless application guidance and case management</span>
               </li>
               <li className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                <span>Best deals on flights, hotels, and tours</span>
+                <span>Personalized settlement planning and post-arrival support</span>
               </li>
               <li className="flex items-start gap-3">
                 <Users className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
@@ -151,7 +149,7 @@ export default function About() {
               </li>
               <li className="flex items-start gap-3">
                 <Star className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                <span>Expert advice from experienced travel consultants</span>
+                <span>Expert advice from experienced immigration consultants</span>
               </li>
             </ul>
           </div>
@@ -160,23 +158,23 @@ export default function About() {
             {/* Image collage */}
             <div className="grid grid-cols-2 gap-2 mb-4">
               <div className="overflow-hidden rounded-lg">
-                <img src="/images/about1.jpg" alt="Scenic travel destination" className="w-full h-32 object-cover" />
+                <img src="/images/image6.jpg" alt="Visa interview" className="w-full h-32 object-cover" />
               </div>
               <div className="overflow-hidden rounded-lg">
-                <img src="/images/about2.jpg" alt="Traveler with luggage" className="w-full h-32 object-cover" />
+                <img src="/images/office.jpg" alt="Consultation meeting" className="w-full h-32 object-cover" />
               </div>
               <div className="overflow-hidden rounded-lg">
-                <img src="/images/about3.jpg" alt="Airport scene" className="w-full h-32 object-cover" />
+                <img src="/images/check.jpg" alt="Document review" className="w-full h-32 object-cover" />
               </div>
               <div className="overflow-hidden rounded-lg flex items-center justify-center bg-blue-100 text-sm text-slate-700">
                 <span className="px-3">24/7 Support</span>
               </div>
             </div>
 
-            <blockquote className="italic text-slate-800">“With FastGuzo, every journey is more than a trip — it’s an experience.”</blockquote>
+            <blockquote className="italic text-slate-800">“With FastGuzo, every immigration plan is handled with care and expertise.”</blockquote>
             <div className="mt-6">
-              <p className="font-semibold">Ready to start your next journey?</p>
-              <a href="#" className="inline-block mt-3 bg-blue-600 text-white px-5 py-2 rounded-lg">Contact our team</a>
+              <p className="font-semibold">Ready to start your immigration application?</p>
+              <a href="#contact" className="inline-block mt-3 bg-blue-600 text-white px-5 py-2 rounded-lg">Contact our team</a>
             </div>
           </div>
         </div>

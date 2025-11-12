@@ -11,19 +11,19 @@ export default function Articles() {
       title: "How to Prepare for Student Visas",
       excerpt:
         "A step-by-step guide to the documentation, timeline, and tips that increase your chance of success.",
-      img: "/images/get-to-know-us.jpg",
+      img: "/images/visaInterview.jpg",
       href: "#",
     },
     {
-      title: "Top Destinations for International Students",
+      title: "Top Destinations",
       excerpt: "Explore affordable and high-quality study destinations with scholarships and support services.",
-      img: "/images/office.jpg",
+      img: "/images/dest.jpg",
       href: "#",
     },
     {
-      title: "Packing & Travel Checklist",
-      excerpt: "Everything you need to bring and prepare before you fly — make your move stress-free.",
-      img: "/images/hero.jpg",
+      title: "Pre-departure & Settlement Checklist",
+      excerpt: "A practical checklist to help you prepare documents, packing, and initial settlement steps after arrival.",
+      img: "/images/check.jpg",
       href: "#",
     },
   ]
@@ -153,9 +153,9 @@ export default function Articles() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-blue-600 uppercase">Latest from FastGuzo</p>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3">Articles & Travel Tips</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-3">Articles & Immigration Guides</h2>
           <p className="text-slate-600 max-w-2xl mx-auto mt-3">
-            Helpful articles and guides to prepare you for travel, study, and life abroad.
+            Helpful guides and checklists to prepare you for visa applications, interviews, and settling abroad.
           </p>
         </div>
 
