@@ -170,7 +170,7 @@ export default function Articles() {
               transition={{ duration: 0.7, delay: i * 0.12 }}
             >
               <div className="relative h-44 w-full">
-                <img src={a.img} alt={a.title} className="object-cover w-full h-full" loading="lazy" />
+                <Image src={a.img} alt={a.title} fill className="object-cover w-full h-full" />
               </div>
 
               <div className="p-6">

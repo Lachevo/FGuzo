@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
+import Image from "next/image"
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/images/primary-logo-colored.png" alt="FastGuzo logo" className="h-16 block" />
+              <Image src="/images/primary-logo-colored.png" alt="FastGuzo logo" width={160} height={64} className="block" />
             <div className="mt-3 flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor">
                 <path d="M12 2l3 3 5 1-1 5 3 3-3 3-3 1-2 3-2-3-3-1-3-3 3-3-1-5 5-1 3-3z" strokeWidth=".8" strokeLinecap="round" strokeLinejoin="round" />

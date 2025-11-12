@@ -3,8 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { motion } from "framer-motion"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import Image from "next/image"
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0)
@@ -19,38 +18,54 @@ export default function Testimonials() {
 
   useEffect(() => {
     if (typeof window === "undefined") return
-    gsap.registerPlugin(ScrollTrigger)
 
-    const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray(".testimonial-card")
-      // animate vertical entrance but do not touch opacity — framer-motion handles opacity
-      gsap.from(cards, {
-        y: 30,
-        // keep opacity alone to framer-motion so GSAP doesn't leave cards invisible if trigger misses
-        stagger: 0.12,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-        },
-      })
+    // Dynamically import GSAP and ScrollTrigger to avoid adding them to the initial client bundle.
+    let ctx: any = null
+    let gsap: any = null
 
-      if (floatRef.current) {
-        gsap.to(floatRef.current, {
-          yPercent: -8,
-          ease: "none",
+    ;(async () => {
+      const gsapModule = await import("gsap")
+      const scrollTrigger = await import("gsap/dist/ScrollTrigger")
+      gsap = gsapModule.default ?? gsapModule
+      gsap.registerPlugin(scrollTrigger.ScrollTrigger)
+
+      ctx = gsap.context(() => {
+        const cards = gsap.utils.toArray(".testimonial-card")
+        // animate vertical entrance but do not touch opacity — framer-motion handles opacity
+        gsap.from(cards, {
+          y: 30,
+          // keep opacity alone to framer-motion so GSAP doesn't leave cards invisible if trigger misses
+          stagger: 0.12,
+          duration: 0.8,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.6,
+            start: "top 80%",
           },
         })
-      }
-    }, containerRef)
 
-    return () => ctx.revert()
+        if (floatRef.current) {
+          gsap.to(floatRef.current, {
+            yPercent: -8,
+            ease: "none",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 0.6,
+            },
+          })
+        }
+      }, containerRef)
+    })()
+
+    return () => {
+      try {
+        if (ctx) ctx.revert()
+      } catch (e) {
+        // ignore revert errors
+      }
+    }
   }, [])
 
   const testimonials = [
@@ -158,14 +173,13 @@ export default function Testimonials() {
               <p className="text-slate-700 mb-6 leading-relaxed italic">"{testimonials[current].text}"</p>
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-blue-600 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
-                  <img 
-                    src={testimonials[current].image} 
-                    alt={`${testimonials[current].author} avatar`} 
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "/placeholder-user.jpg";
-                    }}
+                  <Image
+                    src={testimonials[current].image}
+                    alt={`${testimonials[current].author} avatar`}
+                    width={48}
+                    height={48}
+                    className="object-cover w-full h-full"
+                    priority={false}
                   />
                 </div>
                 <div>

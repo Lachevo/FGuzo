@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Clock, Phone, Mail, ArrowRight, PhoneCall } from "lucide-react"
 
 export default function CallbackSection() {
@@ -89,12 +90,7 @@ export default function CallbackSection() {
               >
                 {feature.image ? (
                   <>
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
-                    />
+                    <Image src={feature.image} alt={feature.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <h3 className="text-white font-semibold text-sm md:text-base">{feature.title}</h3>

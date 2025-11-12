@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Award, Users, FileCheck, Plane, GraduationCap, Sparkles, CheckCircle2, Hotel, BookOpen } from "lucide-react"
+import Image from "next/image"
 import { motion } from "framer-motion"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 // AnimatedNumber: small client-side count-up that starts when scrolled into view
 function AnimatedNumber({
@@ -78,50 +77,62 @@ export default function CompanyOverview() {
 
   useEffect(() => {
     if (typeof window === "undefined") return
-    gsap.registerPlugin(ScrollTrigger)
-    const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray(".service-card")
-      // make the card entrance move more when scrolled
-      gsap.from(cards, {
-        y: 120,
-        opacity: 0,
-        scale: 0.85,
-        stagger: 0.15,
-        duration: 1.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-        },
-      })
-      // plane parallax
-      if (floatPlaneRef.current) {
-        // increase plane parallax and scrub for a stronger scroll effect
-        gsap.to(floatPlaneRef.current, {
-          yPercent: -40,
-          ease: "none",
+
+    let ctx: any
+
+    const run = async () => {
+      const gsapModule = await import("gsap")
+      const gsap = gsapModule.default || gsapModule
+      const { ScrollTrigger } = await import("gsap/dist/ScrollTrigger")
+      gsap.registerPlugin(ScrollTrigger)
+
+      ctx = gsap.context(() => {
+        const cards = gsap.utils.toArray(".service-card")
+        // make the card entrance move more when scrolled
+        gsap.from(cards, {
+          y: 120,
+          opacity: 0,
+          scale: 0.85,
+          stagger: 0.15,
+          duration: 1.1,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.4,
+            start: "top 80%",
           },
         })
-      }
 
-      // badge subtle bob
-      if (floatBadgeRef.current) {
-        gsap.to(floatBadgeRef.current, {
-          y: -24,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          duration: 3,
-        })
-      }
-    }, containerRef)
+        // plane parallax
+        if (floatPlaneRef.current) {
+          // increase plane parallax and scrub for a stronger scroll effect
+          gsap.to(floatPlaneRef.current, {
+            yPercent: -40,
+            ease: "none",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1.4,
+            },
+          })
+        }
 
-    return () => ctx.revert()
+        // badge subtle bob
+        if (floatBadgeRef.current) {
+          gsap.to(floatBadgeRef.current, {
+            y: -24,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            duration: 3,
+          })
+        }
+      }, containerRef)
+    }
+
+    run()
+
+    return () => ctx?.revert && ctx.revert()
   }, [])
 
   const services = [
@@ -210,12 +221,7 @@ export default function CompanyOverview() {
             {/* Office Image */}
             <div className="mb-8">
               <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-2xl">
-                  <img
-                  src="/images/image5.jpg"
-                  alt="Immigration consultancy office"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                <Image src="/images/image5.jpg" alt="Immigration consultancy office" fill className="object-cover" />
                 {/* Decorative element */}
                 <div className="absolute -top-8 -right-8 w-32 h-32 bg-yellow-300 rounded-full opacity-30 pointer-events-none"></div>
               </div>
