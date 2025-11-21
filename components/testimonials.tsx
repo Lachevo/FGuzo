@@ -83,6 +83,7 @@ export default function Testimonials() {
       image: "/images/tsion_assefa.jpg",
       rating: 5,
     },
+
     
     {
       text: "The team at FastGuzo made my immigration application process seamless. Their expertise and attention to detail are unmatched.",
@@ -96,6 +97,13 @@ export default function Testimonials() {
       author: "Biruk Abate",
       role: "Applicant",
       image: "/images/biruk_abate.jpg",
+      rating: 5,
+    },
+    {
+      text: "Fastguzo is dedicated to providing clients with clear, accessible, and reliable information. The company’s structured approach ensures that every client receives accurate guidance and a seamless service experience.",
+      
+      role: "Documentation Officer",
+      image: "/images/doc_officer.jpg",
       rating: 5,
     },
    
