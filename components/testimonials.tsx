@@ -109,11 +109,11 @@ export default function Testimonials() {
   ]
 
   const next = () => {
-    setCurrent((current + 1) % testimonials.length)
+    setCurrent((c) => (c + 1) % testimonials.length)
   }
 
   const prev = () => {
-    setCurrent((current - 1 + testimonials.length) % testimonials.length)
+    setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)
   }
 
   return (
@@ -147,6 +147,7 @@ export default function Testimonials() {
 
             {/* Testimonial Card */}
             <motion.div
+              key={current}
               className="testimonial-card bg-white text-slate-900 p-8 rounded-xl shadow-2xl max-w-md mx-auto transition-all duration-300 w-full"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
