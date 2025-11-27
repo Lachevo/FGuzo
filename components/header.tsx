@@ -92,8 +92,8 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <p className="text-xs text-slate-500">Call us now!</p>
-              <a href="tel:+251953535348" className="text-base font-bold text-slate-800 hover:text-blue-600 transition-colors">
-                +251953535348
+              <a href="tel:+251952434344" className="text-base font-bold text-slate-800 hover:text-blue-600 transition-colors">
+                +251952434344
               </a>
             </div>
           </div>

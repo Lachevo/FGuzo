@@ -167,7 +167,7 @@ export default function CallbackSection() {
                     </div>
                     <div>
                       <p className="text-sm text-slate-500">Phone</p>
-                      <p className="font-semibold text-slate-900">0928929394</p>
+                      <p className="font-semibold text-slate-900">0952434344</p>
                     </div>
                   </div>
 
@@ -177,7 +177,7 @@ export default function CallbackSection() {
                     </div>
                     <div>
                       <p className="text-sm text-slate-500">Alternate</p>
-                      <p className="font-semibold text-slate-900">0952434344</p>
+                      <p className="font-semibold text-slate-900">0928929394</p>
                     </div>
                   </div>
 
