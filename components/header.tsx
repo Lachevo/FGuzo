@@ -36,7 +36,7 @@ export default function Header() {
             <img
               src="/images/primary-logo-colored.png"
               alt="FastGuzo Logo"
-              className="h-8 md:h-12 w-auto"
+              className="h-10 md:h-16 lg:h-20 w-auto"
             />
           </a>
           {/* Certification badge (links to Affiliations & Recognitions) - visible on mobile too */}

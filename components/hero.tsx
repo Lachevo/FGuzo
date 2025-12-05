@@ -59,13 +59,13 @@ export default function Hero() {
   <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 min-h-[70vh] md:min-h-screen flex items-center overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full opacity-10 blur-3xl"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full opacity-10 blur-3xl" />
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-blue-600 rounded-full"></div>
-          <div className="absolute top-1/4 right-1/3 w-1 h-1 bg-blue-600 rounded-full"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-1 h-1 bg-blue-600 rounded-full"></div>
-          <div className="absolute bottom-1/4 right-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>
+          <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-blue-600 rounded-full" />
+          <div className="absolute top-1/4 right-1/3 w-1 h-1 bg-blue-600 rounded-full" />
+          <div className="absolute bottom-1/3 left-1/4 w-1 h-1 bg-blue-600 rounded-full" />
+          <div className="absolute bottom-1/4 right-1/2 w-1 h-1 bg-blue-600 rounded-full" />
         </div>
       </div>
 
@@ -113,7 +113,7 @@ export default function Hero() {
               <div ref={imageRef} className="absolute inset-0 flex items-center justify-center z-20">
                 <div className="w-[110%] h-full overflow-visible">
                   <img
-                    src="/images/plane.jpg"
+                    src="/images/cert.jpg"
                     alt="Plane taking off scene"
                     className="w-full h-full object-contain object-center"
                     style={{

@@ -157,19 +157,19 @@ export default function About() {
             </ul>
           </div>
 
-          <div className="p-6 bg-blue-50 rounded-2xl">
+          <div className="p-8 md:p-10 bg-blue-50 rounded-3xl shadow-md">
             {/* Image collage */}
-            <div className="grid grid-cols-2 gap-2 mb-4">
-              <div className="overflow-hidden rounded-lg relative h-32">
-                <Image src="/images/visaInterview.jpg" alt="Visa interview" fill className="object-cover" />
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="overflow-hidden rounded-lg relative h-40 md:h-48">
+                <Image src="/images/FastGuzo 11.0.jpg" alt="FastGuzo 11.0" fill className="object-cover" />
               </div>
-              <div className="overflow-hidden rounded-lg relative h-32">
-                <Image src="/images/office.jpg" alt="Consultation meeting" fill className="object-cover" />
+              <div className="overflow-hidden rounded-lg relative h-40 md:h-48">
+                <Image src="/images/FastGuzo 10.1.jpg" alt="FastGuzo 10.1" fill className="object-cover" />
               </div>
-              <div className="overflow-hidden rounded-lg relative h-32">
-                <Image src="/images/check.jpg" alt="Document review" fill className="object-cover" />
+              <div className="overflow-hidden rounded-lg relative h-40 md:h-48">
+                <Image src="/images/FastGuzo 9.0.jpg" alt="FastGuzo 9.0" fill className="object-cover" />
               </div>
-              <div className="overflow-hidden rounded-lg flex items-center justify-center bg-blue-100 text-sm text-slate-700">
+              <div className="overflow-hidden rounded-lg flex items-center justify-center bg-blue-100 text-sm text-slate-700 h-40 md:h-48">
                 <span className="px-3">24/7 Support</span>
               </div>
             </div>
