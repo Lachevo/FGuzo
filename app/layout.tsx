@@ -34,6 +34,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png" />
         <link rel="icon" type="image/png" sizes="256x256" href="/images/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
+        {/* Manifest and root-level favicon hints to help crawlers find icons */}
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body className={`font-sans antialiased`}>
         {children}
