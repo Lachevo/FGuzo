@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description: 'FastGuzo is a trusted immigration consultancy — visas, applications, and end-to-end immigration support for students, families, and skilled migrants. Personalized guidance, expert documentation assistance, and local expertise.',
   generator: 'FastGuzo',
   icons: {
-    icon: '/images/favicon.png',
-    shortcut: '/images/favicon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/images/favicon.png',
   },
 }
