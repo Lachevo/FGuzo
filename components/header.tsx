@@ -87,9 +87,9 @@ export default function Header() {
         {/* Right Side - Call to Action */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <a href="tel:+251952434344" aria-label="Call FastGuzo" className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
               <Phone className="w-6 h-6 text-white" />
-            </div>
+            </a>
             <div className="hidden sm:block">
               <p className="text-xs text-slate-500">Call us now!</p>
               <a href="tel:+251952434344" className="text-base font-bold text-slate-800 hover:text-blue-600 transition-colors">
@@ -139,17 +139,7 @@ export default function Header() {
           >
             Contact
           </a>
-          <div className="flex items-center gap-3 pt-2">
-            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-              <Phone className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <p className="text-xs text-slate-500">Call us now!</p>
-              <a href="tel:+251952434344" className="text-base font-bold text-slate-800">
-                +251952434344
-              </a>
-            </div>
-          </div>
+          {/* Mobile menu intentionally only shows navigation links (Home, About Us, Contact) */}
         </div>
       )}
     </nav>
