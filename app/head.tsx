@@ -9,8 +9,6 @@ export default function Head() {
 
       {/* Favicons and touch icons */}
       <link rel="icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon.png" />
-      <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
       <link rel="manifest" href="/site.webmanifest" />
 
