@@ -22,7 +22,7 @@ export default function Header() {
   }, [])
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-40 border-b border-slate-100">
+    <nav className="bg-white shadow-sm sticky top-0 z-60 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Left Side - Logo and Navigation Links */}
         <div className="flex items-center gap-8">
