@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap for search engines
-Sitemap: https://fastguzo.com/sitemap.xml
