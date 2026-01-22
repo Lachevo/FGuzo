@@ -23,41 +23,41 @@ export default function Testimonials() {
     let ctx: any = null
     let gsap: any = null
 
-    ;(async () => {
-      const gsapModule = await import("gsap")
-      const scrollTrigger = await import("gsap/dist/ScrollTrigger")
-      gsap = gsapModule.default ?? gsapModule
-      gsap.registerPlugin(scrollTrigger.ScrollTrigger)
+      ; (async () => {
+        const gsapModule = await import("gsap")
+        const scrollTrigger = await import("gsap/dist/ScrollTrigger")
+        gsap = gsapModule.default ?? gsapModule
+        gsap.registerPlugin(scrollTrigger.ScrollTrigger)
 
-      ctx = gsap.context(() => {
-        const cards = gsap.utils.toArray(".testimonial-card")
-        // animate vertical entrance but do not touch opacity — framer-motion handles opacity
-        gsap.from(cards, {
-          y: 30,
-          // keep opacity alone to framer-motion so GSAP doesn't leave cards invisible if trigger misses
-          stagger: 0.12,
-          duration: 0.8,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 80%",
-          },
-        })
-
-        if (floatRef.current) {
-          gsap.to(floatRef.current, {
-            yPercent: -8,
-            ease: "none",
+        ctx = gsap.context(() => {
+          const cards = gsap.utils.toArray(".testimonial-card")
+          // animate vertical entrance but do not touch opacity — framer-motion handles opacity
+          gsap.from(cards, {
+            y: 30,
+            // keep opacity alone to framer-motion so GSAP doesn't leave cards invisible if trigger misses
+            stagger: 0.12,
+            duration: 0.8,
+            ease: "power3.out",
             scrollTrigger: {
               trigger: containerRef.current,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 0.6,
+              start: "top 80%",
             },
           })
-        }
-      }, containerRef)
-    })()
+
+          if (floatRef.current) {
+            gsap.to(floatRef.current, {
+              yPercent: -8,
+              ease: "none",
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 0.6,
+              },
+            })
+          }
+        }, containerRef)
+      })()
 
     return () => {
       try {
@@ -84,7 +84,7 @@ export default function Testimonials() {
       rating: 5,
     },
 
-    
+
     {
       text: "The team at FastGuzo made my immigration application process seamless. Their expertise and attention to detail are unmatched.",
       author: "Gedion Abera",
@@ -101,12 +101,12 @@ export default function Testimonials() {
     },
     {
       text: "Fastguzo is dedicated to providing clients with clear, accessible, and reliable information. The company’s structured approach ensures that every client receives accurate guidance and a seamless service experience.",
-      
+
       role: "Documentation Officer",
       image: "/images/doc_officer.jpg",
       rating: 5,
     },
-   
+
     {
       text: "Clients trust us because we deliver on our promises. Our consultancy is built on transparency, accountability, and consistent results. I am proud to lead a team that values excellence and meaningful partnerships.",
       author: "Eyob Kebede",
@@ -125,16 +125,16 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-900 to-slate-900 text-white relative overflow-hidden">
+    <section className="py-20 bg-blue-900/80 backdrop-blur-md text-white relative overflow-hidden">
       {/* Decorative dots */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-2 h-2 bg-white rounded-full"></div>
         <div className="absolute top-32 left-32 w-2 h-2 bg-white rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-2 h-2 bg-white rounded-full"></div>
       </div>
-  <div ref={floatRef} className="absolute -right-8 top-8 w-40 h-40 bg-blue-600 rounded-full opacity-20 pointer-events-none" />
+      <div ref={floatRef} className="absolute -right-8 top-8 w-40 h-40 bg-blue-600 rounded-full opacity-20 pointer-events-none" />
 
-  <div ref={containerRef} className="max-w-5xl mx-auto px-4 relative z-10">
+      <div ref={containerRef} className="max-w-5xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <p className="text-blue-300 font-semibold text-sm uppercase mb-3">Customer Stories</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -202,9 +202,8 @@ export default function Testimonials() {
                 key={index}
                 onClick={() => setCurrent(index)}
                 aria-label={`Go to testimonial ${index + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  index === current ? "bg-white w-8" : "bg-white bg-opacity-40 w-2"
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${index === current ? "bg-white w-8" : "bg-white bg-opacity-40 w-2"
+                  }`}
               />
             ))}
           </div>

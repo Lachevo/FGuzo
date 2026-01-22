@@ -51,12 +51,12 @@ export default function Hero() {
     return () => {
       try {
         ScrollTrigger.getAll().forEach((t) => t.kill())
-      } catch (e) {}
+      } catch (e) { }
     }
   }, [])
 
   return (
-  <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 min-h-[70vh] md:min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl" />
@@ -69,7 +69,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div ref={sectionRef} className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div ref={sectionRef} className="max-w-7xl mx-auto px-4 pt-4 pb-4 grid md:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}

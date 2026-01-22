@@ -32,7 +32,7 @@ export default function Affiliations() {
   ]
 
   return (
-    <section id="affiliations" className="py-12 bg-gradient-to-b from-white to-blue-50">
+    <section id="affiliations" className="py-12 bg-transparent">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-slate-500 text-sm uppercase tracking-wider font-medium">Affiliations & Recognitions</p>

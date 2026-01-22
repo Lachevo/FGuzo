@@ -22,9 +22,8 @@ export default function FloatingContact() {
   return (
     <div className="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-3">
       <div
-        className={`mb-2 w-64 md:w-80 bg-white rounded-lg shadow-lg p-4 text-sm text-slate-700 transition-all duration-200 ease-out transform ${
-          open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
-        }`}
+        className={`mb-2 w-64 md:w-80 bg-white rounded-lg shadow-lg p-4 text-sm text-slate-700 transition-all duration-200 ease-out transform ${open ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-2 pointer-events-none"
+          }`}
         aria-hidden={!open}
       >
         <div className="flex items-center justify-between mb-2">
@@ -35,6 +34,10 @@ export default function FloatingContact() {
           <a href="tel:0928929394" className="block text-slate-700 hover:text-blue-600">Call: 0928929394</a>
           <a href="tel:0952434344" className="block text-slate-700 hover:text-blue-600">Call: 0952434344</a>
           <a href="mailto:Fastguzoglobalservice@gmail.com" className="block text-slate-700 hover:text-blue-600">Email: Fastguzoglobalservice@gmail.com</a>
+          <div className="pt-2 text-xs text-slate-500 border-t border-slate-100 mt-2">
+            <p className="font-semibold text-slate-700 mb-0.5">Our Office:</p>
+            <p>Reality Plaza, Office 402, Bole</p>
+          </div>
         </div>
       </div>
 

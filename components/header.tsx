@@ -22,7 +22,7 @@ export default function Header() {
   }, [])
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-60 border-b border-slate-100">
+    <nav className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-60 border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Left Side - Logo and Navigation Links */}
         <div className="flex items-center gap-8">
@@ -52,27 +52,24 @@ export default function Header() {
             <a
               href="#"
               onClick={(e) => scrollTo(e, "top", "Home")}
-              className={`text-base font-medium transition-colors ${
-                activeLink === "Home" ? "text-blue-600" : "text-slate-800"
-              }`}
+              className={`text-base font-medium transition-colors ${activeLink === "Home" ? "text-blue-600" : "text-slate-800"
+                }`}
             >
               Home
             </a>
             <a
               href="#about"
               onClick={(e) => scrollTo(e, "about", "About Us")}
-              className={`text-base font-medium transition-colors ${
-                activeLink === "About Us" ? "text-blue-600" : "text-slate-800"
-              }`}
+              className={`text-base font-medium transition-colors ${activeLink === "About Us" ? "text-blue-600" : "text-slate-800"
+                }`}
             >
               About Us
             </a>
             <a
               href="#contact"
               onClick={(e) => scrollTo(e, "contact", "Contact")}
-              className={`text-base font-medium transition-colors ${
-                activeLink === "Contact" ? "text-blue-600" : "text-slate-800"
-              }`}
+              className={`text-base font-medium transition-colors ${activeLink === "Contact" ? "text-blue-600" : "text-slate-800"
+                }`}
             >
               Contact
             </a>
@@ -109,9 +106,8 @@ export default function Header() {
               scrollTo(e, "top", "Home")
               setIsOpen(false)
             }}
-            className={`block text-base font-medium transition-colors ${
-              activeLink === "Home" ? "text-blue-600" : "text-slate-800"
-            }`}
+            className={`block text-base font-medium transition-colors ${activeLink === "Home" ? "text-blue-600" : "text-slate-800"
+              }`}
           >
             Home
           </a>
@@ -121,9 +117,8 @@ export default function Header() {
               scrollTo(e, "about", "About Us")
               setIsOpen(false)
             }}
-            className={`block text-base font-medium transition-colors ${
-              activeLink === "About Us" ? "text-blue-600" : "text-slate-800"
-            }`}
+            className={`block text-base font-medium transition-colors ${activeLink === "About Us" ? "text-blue-600" : "text-slate-800"
+              }`}
           >
             About Us
           </a>
@@ -133,9 +128,8 @@ export default function Header() {
               scrollTo(e, "contact", "Contact")
               setIsOpen(false)
             }}
-            className={`block text-base font-medium transition-colors ${
-              activeLink === "Contact" ? "text-blue-600" : "text-slate-800"
-            }`}
+            className={`block text-base font-medium transition-colors ${activeLink === "Contact" ? "text-blue-600" : "text-slate-800"
+              }`}
           >
             Contact
           </a>

@@ -12,7 +12,7 @@ export default function Certification() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="bg-gradient-to-r from-white/80 to-blue-50 border border-slate-100 rounded-2xl p-8 shadow-lg flex flex-col md:flex-row items-start gap-6"
+          className="bg-white/40 backdrop-blur-sm border border-slate-100 rounded-2xl p-8 shadow-lg flex flex-col md:flex-row items-start gap-6"
         >
           <div className="flex-shrink-0 bg-blue-600/5 rounded-lg p-3">
             <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center shadow-sm">

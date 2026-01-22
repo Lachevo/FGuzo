@@ -14,12 +14,12 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image src="/images/primary-logo-colored.png" alt="FastGuzo logo" width={160} height={64} className="block" />
-            <div className="mt-3 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor">
-                <path d="M12 2l3 3 5 1-1 5 3 3-3 3-3 1-2 3-2-3-3-1-3-3 3-3-1-5 5-1 3-3z" strokeWidth=".8" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <a href="#certification" className="text-sm text-slate-700 hover:text-blue-600">Certified by Canada Immigration Office</a>
-            </div>
+              <div className="mt-3 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor">
+                  <path d="M12 2l3 3 5 1-1 5 3 3-3 3-3 1-2 3-2-3-3-1-3-3 3-3-1-5 5-1 3-3z" strokeWidth=".8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <a href="#certification" className="text-sm text-slate-700 hover:text-blue-600">Certified by Canada Immigration Office</a>
+              </div>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed">
               Call or email us today to schedule a free consultation. Let us discuss your goals and how we can make them
@@ -57,6 +57,19 @@ export default function Footer() {
                   </svg>
                   <span>Fastguzoglobalservice@gmail.com</span>
                 </a>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-blue-50 text-blue-600 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <circle cx="12" cy="10" r="3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p className="leading-tight">Reality Plaza, Office 402</p>
+                  <p className="text-xs text-slate-500 mt-1">Bole, Addis Ababa</p>
+                </div>
               </div>
             </div>
           </div>

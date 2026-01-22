@@ -41,12 +41,12 @@ export default function PartnersSection() {
   ]
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-transparent relative overflow-hidden">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-slate-500 text-sm uppercase tracking-wider font-medium mb-2">Our Trusted Partners</p>
         </div>
-  <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-6 md:gap-10 lg:gap-14 py-4 overflow-x-auto md:overflow-visible" style={{ WebkitOverflowScrolling: 'touch' }}>
+        <div className="flex flex-wrap md:flex-nowrap justify-center items-center gap-6 md:gap-10 lg:gap-14 py-4 overflow-x-auto md:overflow-visible" style={{ WebkitOverflowScrolling: 'touch' }}>
           {partners.map((partner, index) => (
             <div key={`${partner.name}-${index}`} className="partner-item w-1/3 flex items-center justify-center md:w-auto md:flex-shrink-0 md:snap-center">
               <div className="h-20 md:h-24 lg:h-28 flex items-center justify-center px-3 w-full md:min-w-[120px]">

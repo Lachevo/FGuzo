@@ -96,59 +96,7 @@ export default function Articles() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-20 overflow-hidden">
-      {/* Dynamic Background Blobs */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-20">
-        {blobs.map((b, i) => (
-          <motion.div
-            key={i}
-            initial={{ x: 0, y: 0, opacity: 0.9 }}
-            animate={{
-              x: [0, (i % 2 === 0 ? -120 : 120), 0],
-              y: [0, (i % 2 === 0 ? -40 : 40), 0],
-            }}
-            transition={{ duration: b.dur, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: i * 1 }}
-            style={{
-              position: "absolute",
-              width: b.w,
-              height: b.h,
-              top: b.top,
-              left: b.left as any,
-              right: (b as any).right,
-              bottom: (b as any).bottom,
-              borderRadius: "50%",
-              filter: "blur(80px)",
-              background: b.bg,
-              opacity: 0.7,
-              transform: "translate3d(0,0,0)",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Interactive particles (dots/lines) that react to mouse movement */}
-      <div ref={(el) => { containerRef.current = el }} className="pointer-events-none absolute inset-0 -z-10">
-        {particlesRef.current.map((p, i) => (
-          <div
-            key={i}
-            ref={(el) => { dotRefs.current[i] = el }}
-            className={`absolute transform-gpu`}
-            style={{
-              left: `${p.x}%`,
-              top: `${p.y}%`,
-              width: p.type === "line" ? `${p.size * 3}px` : `${p.size}px`,
-              height: p.type === "line" ? `${Math.max(1, p.size / 3)}px` : `${p.size}px`,
-              borderRadius: p.type === "line" ? "4px" : "50%",
-              filter: "blur(0.6px)",
-              opacity: p.type === "line" ? 0.85 : 0.9,
-              transition: "transform 0.6s cubic-bezier(.2,.9,.2,1)",
-              transform: "translate3d(0,0,0)",
-              background: particleColors[i % particleColors.length],
-              mixBlendMode: "screen",
-            }}
-          />
-        ))}
-      </div>
+    <section ref={sectionRef} className="relative py-20 bg-transparent overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">

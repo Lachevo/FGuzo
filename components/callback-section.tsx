@@ -5,7 +5,7 @@ import type React from "react"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Clock, Phone, Mail, ArrowRight, PhoneCall } from "lucide-react"
+import { Clock, Phone, Mail, ArrowRight, PhoneCall, MapPin } from "lucide-react"
 
 export default function CallbackSection() {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ export default function CallbackSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Create email subject and body
     const subject = encodeURIComponent("Contact Request from FastGuzo Website")
     const body = encodeURIComponent(
@@ -31,10 +31,10 @@ export default function CallbackSection() {
       `Phone: ${formData.phone}\n\n` +
       `Please contact me at your earliest convenience.\n\nThank you!`
     )
-    
+
     // Open email client
     window.location.href = `mailto:fastguzoglobalservice@gmail.com?subject=${subject}&body=${body}`
-    
+
     // Reset form after a short delay
     setTimeout(() => {
       setFormData({ name: "", email: "", phone: "" })
@@ -63,14 +63,14 @@ export default function CallbackSection() {
   ]
 
   return (
-  <section id="contact" className="py-24 pb-32 md:pb-24 pr-4 md:pr-0 bg-gradient-to-b from-slate-50 via-blue-50/30 to-white relative overflow-hidden">
+    <section id="contact" className="py-24 pb-32 md:pb-24 pr-4 md:pr-0 bg-transparent relative overflow-hidden">
       {/* Modern background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="hidden sm:block absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
         <div className="hidden sm:block absolute bottom-0 left-0 w-96 h-96 bg-slate-100 rounded-full opacity-20 blur-3xl"></div>
       </div>
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Features Grid */}
         <div className="mb-20">
           <motion.div
@@ -148,8 +148,8 @@ export default function CallbackSection() {
         </div>
 
         {/* Contact Form Section */}
-  <div id="contact-form" className="max-w-full md:max-w-5xl mx-0 md:mx-auto">
-    <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-12 border border-slate-100">
+        <div id="contact-form" className="max-w-full md:max-w-5xl mx-0 md:mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl p-4 md:p-12 border border-slate-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-start">
               {/* Left Content */}
               <motion.div
@@ -159,8 +159,19 @@ export default function CallbackSection() {
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Request a Call Back</h2>
                 <p className="text-lg text-slate-600 mb-8">Feel free to let us call you back. We're here to help.</p>
-                
+
                 <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-blue-100 group/item">
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover/item:bg-blue-600 transition-colors duration-300">
+                      <MapPin className="w-6 h-6 text-blue-600 group-hover/item:text-white transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-slate-500">Our Office</p>
+                      <p className="font-semibold text-slate-900 leading-tight">Reality Plaza, Office 402</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Bole, Addis Ababa</p>
+                    </div>
+                  </div>
+
                   <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                       <Phone className="w-6 h-6 text-blue-600" />

@@ -20,7 +20,7 @@ export default function GetToKnowUs() {
   ]
 
   return (
-    <section className="py-20 bg-white relative" ref={containerRef}>
+    <section className="py-20 bg-transparent relative" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
@@ -57,7 +57,7 @@ export default function GetToKnowUs() {
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Your Trusted Partner for
               <br />
-                Visa Solutions
+              Visa Solutions
             </h2>
 
             {/* Benefits List */}

@@ -12,21 +12,25 @@ import Articles from "@/components/articles"
 import About from "@/components/about"
 import CallbackSection from "@/components/callback-section"
 import Footer from "@/components/footer"
+import AnimatedBackground from "@/components/animated-background"
+import FlagMarquee from "@/components/flag-marquee"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-slate-50">
+    <main className="min-h-screen relative">
+      <AnimatedBackground />
       <Header />
+      <FlagMarquee />
       <Hero />
-  <About />
+      <About />
       <PartnersSection />
-    <Affiliations />
+      <Affiliations />
       <GetToKnowUs />
-    <Services />
+      <Services />
       <CompanyOverview />
-  <Certification />
+      <Certification />
       <Testimonials />
-  <Articles />
+      <Articles />
       <CallbackSection />
       <Footer />
     </main>

@@ -158,7 +158,7 @@ export default function CompanyOverview() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="py-20 bg-transparent relative overflow-hidden">
       {/* Floating plane and badge */}
       <div ref={floatPlaneRef} className="absolute right-10 top-10 opacity-90 pointer-events-none z-10">
         <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
@@ -167,7 +167,7 @@ export default function CompanyOverview() {
       </div>
       <div ref={floatBadgeRef} className="absolute right-10 bottom-10 p-4 bg-white/95 backdrop-blur-sm text-sm text-slate-900 rounded-xl shadow-lg border border-slate-200 pointer-events-none z-10">
         <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-blue-600" />
+          <Sparkles className="w-4 h-4 text-blue-600" />
           <span className="font-semibold">Global Immigration Services</span>
         </div>
       </div>
@@ -235,7 +235,7 @@ export default function CompanyOverview() {
                 const IconComponent = typeof service.icon === 'function' ? service.icon : Plane
                 const iconColor = service.color || "text-blue-600"
                 const iconBg = service.bgColor || "bg-blue-50"
-                
+
                 return (
                   <motion.div
                     key={index}

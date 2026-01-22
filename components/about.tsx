@@ -54,7 +54,7 @@ export default function About() {
   }, [])
 
   return (
-    <section id="about" className="py-20 bg-white relative" ref={containerRef}>
+    <section id="about" className="pt-0 pb-20 bg-transparent relative" ref={containerRef}>
       <div className="max-w-7xl mx-auto px-4">
         <div ref={titleRef} className="mx-auto max-w-3xl text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">About Us</h2>
@@ -169,8 +169,8 @@ export default function About() {
               <div className="overflow-hidden rounded-lg relative h-40 md:h-48">
                 <Image src="/images/FastGuzo 9.0.jpg" alt="FastGuzo 9.0" fill className="object-cover" />
               </div>
-              <div className="overflow-hidden rounded-lg flex items-center justify-center bg-blue-100 text-sm text-slate-700 h-40 md:h-48">
-                <span className="px-3">24/7 Support</span>
+              <div className="overflow-hidden rounded-lg relative h-40 md:h-48">
+                <Image src="/images/fg.jpg" alt="FastGuzo 9.0" fill className="object-cover" />
               </div>
             </div>
 

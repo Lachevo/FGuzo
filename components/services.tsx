@@ -27,7 +27,7 @@ export default function Services() {
   ]
 
   return (
-    <section className="py-20 bg-white relative">
+    <section className="py-20 bg-transparent relative">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-blue-600 font-semibold text-sm uppercase mb-3">how we help clients</p>
