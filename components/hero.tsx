@@ -56,7 +56,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[25vh] md:min-h-[30vh] flex items-center overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl" />
@@ -92,7 +92,7 @@ export default function Hero() {
 
         {/* Right Content - Hero Image */}
         <div
-          className={`relative h-[500px] md:h-[650px] lg:h-[750px] w-full transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
+          className={`relative h-[380px] md:h-[520px] lg:h-[600px] w-full transition-all duration-1000 delay-300 ${isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}
         >
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative w-full h-full flex items-center justify-center">
