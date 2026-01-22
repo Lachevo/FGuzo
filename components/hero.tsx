@@ -56,7 +56,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[25vh] md:min-h-[30vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[45vh] md:min-h-[55vh] flex items-center overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl" />

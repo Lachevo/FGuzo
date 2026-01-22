@@ -143,88 +143,59 @@ export default function About() {
               ref={(el) => {
                 if (el) cardsRef.current[i] = el
               }}
-              className="group p-8 bg-white rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-250 hover:-translate-y-1"
             >
-              <div className={`w-14 h-14 rounded-2xl ${item.color.replace('text', 'bg')}/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                <item.icon className={`w-7 h-7 ${item.color}`} />
+              <div className={`w-12 h-12 rounded-lg ${item.color.replace('text', 'bg')}/10 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform`}>
+                <item.icon className={`w-6 h-6 ${item.color}`} />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-slate-900">{item.title}</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-lg font-semibold mb-2 text-slate-900">{item.title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 {item.text}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Split Section: Why Choose Us & Carousel */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="space-y-8 order-2 lg:order-1">
-            <div className="space-y-4">
-              <h3 className="text-3xl font-bold text-slate-900">Why Choose FastGuzo?</h3>
-              <p className="text-slate-600 text-lg">
-                We make the complex immigration process simple and stress-free.
-              </p>
-            </div>
+        {/* Carousel Highlights (kept; 'Why Choose' removed) */}
+        <div className="mb-12">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900 max-h-[360px] md:max-h-[460px]">
+            <Carousel
+              className="w-full"
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+              opts={{
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                {carouselImages.map((src, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative aspect-[16/9] w-full">
+                      <Image
+                        src={src}
+                        alt={`FastGuzo Highlight ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 border-white/20 text-white z-10" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 border-white/20 text-white z-10" />
+            </Carousel>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              {features.map((feature, idx) => (
-                <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                  <div className={`w-10 h-10 rounded-full ${feature.bg} flex items-center justify-center mb-4`}>
-                    <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                  </div>
-                  <h4 className="font-bold text-slate-900 mb-1">{feature.title}</h4>
-                  <p className="text-sm text-slate-500 leading-relaxed">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-4">
-              <a href="#" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all group">
-                Contact our team <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-slate-900">
-              <Carousel
-                className="w-full"
-                plugins={[
-                  Autoplay({
-                    delay: 4000,
-                  }),
-                ]}
-                opts={{
-                  loop: true,
-                }}
-              >
-                <CarouselContent>
-                  {carouselImages.map((src, index) => (
-                    <CarouselItem key={index}>
-                      <div className="relative aspect-[4/3] w-full">
-                        <Image
-                          src={src}
-                          alt={`FastGuzo Highlight ${index + 1}`}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 border-white/20 text-white z-10" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 border-white/20 text-white z-10" />
-              </Carousel>
-
-              <div className="absolute bottom-6 left-6 right-6 text-white pointer-events-none z-20">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
-                  <span className="text-sm font-medium text-blue-200">Our Impact</span>
-                </div>
-                <p className="text-lg font-medium">Helping you cross borders with confidence.</p>
+                <div className="absolute bottom-4 left-6 right-6 text-white pointer-events-none z-20">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-8 h-1 bg-blue-500 rounded-full"></span>
+                <span className="text-sm font-medium text-blue-200">Our Impact</span>
               </div>
+              <p className="text-base font-medium">Helping you cross borders with confidence.</p>
             </div>
           </div>
         </div>
