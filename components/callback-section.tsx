@@ -162,9 +162,15 @@ export default function CallbackSection() {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-blue-100 group/item">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover/item:bg-blue-600 transition-colors duration-300">
+                    <a
+                      href="https://www.google.com/maps/place/Reality+Plaza/@8.9921709,38.7894435,17z/data=!3m1!4b1!4m6!3m5!1s0x164b85aef40d71e5:0x9ddcab5830846df!8m2!3d8.9921656!4d38.7920184!16s%2Fg%2F11pf6clp1n?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Reality Plaza in Google Maps"
+                      className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover/item:bg-blue-600 transition-colors duration-300"
+                    >
                       <MapPin className="w-6 h-6 text-blue-600 group-hover/item:text-white transition-colors duration-300" />
-                    </div>
+                    </a>
                     <div>
                       <p className="text-sm text-slate-500">Our Office</p>
                       <p className="font-semibold text-slate-900 leading-tight">Reality Plaza, Office 402</p>

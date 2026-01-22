@@ -21,22 +21,25 @@ export default function Certification() {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-xl font-semibold text-slate-900">Official Certification — Canada & International Partners</h3>
-            <p className="mt-3 text-slate-700 leading-relaxed text-sm md:text-base">
-              We are proud to announce that our immigration consultancy has been officially certified by the Canada Immigration
-              Office, recognizing our dedication to providing trusted and professional immigration services. This
-              certification allows us to assist clients with complete confidence as they plan their immigration pathways to Canada—whether
-              for study, work, family reunification, or permanent settlement.
+            <h3 className="text-xl font-semibold text-slate-900">RCIC Licensed — Regulated Canadian Immigration Services</h3>
+
+            <div className="mt-4 inline-flex items-start gap-3 bg-blue-50 border border-blue-100 text-blue-800 rounded-lg p-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-md bg-white flex items-center justify-center shadow-sm">
+                <ShieldCheck className="w-5 h-5 text-blue-600" />
+              </div>
+              <div className="text-sm leading-relaxed">
+                <p className="font-medium text-slate-900">FastGuzo operates under a Regulated Canadian Immigration Consultant (RCIC) license.</p>
+                <p className="mt-1 text-slate-700">All immigration services are provided in compliance with Canadian law and are officially authorized by IRCC through regulation by the College of Immigration and Citizenship Consultants (CICC).</p>
+              </div>
+            </div>
+
+            <p className="mt-4 text-slate-700 leading-relaxed text-sm md:text-base">
+              Our RCIC-licensed consultants follow strict professional and ethical standards. We assist clients with
+              visa applications, document preparation, and settlement planning for study, work, family reunification,
+              and permanent residence — always with transparency and a focus on your best outcomes.
             </p>
 
-            <p className="mt-3 text-slate-700 leading-relaxed text-sm md:text-base">
-              Our team of experienced consultants is committed to guiding you through every step of the immigration process,
-              from visa applications and document preparation to settlement and post-arrival support. With this
-              recognition, we continue to uphold the highest standards of integrity, transparency, and care, ensuring that
-              your Canadian dream begins with a trusted and certified partner.
-            </p>
-
-            <div className="mt-4 flex items-center gap-3">
+            <div className="mt-6 flex items-center gap-3">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-medium shadow"

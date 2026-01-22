@@ -82,8 +82,7 @@ export default function Hero() {
             FastGuzo
           </h1>
           <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-            FastGuzo provides expert immigration consultancy — visa applications, documentation guidance, and
-            end-to-end support for students, families, and skilled migrants. Personalized advice and local expertise to help you move with confidence.
+            FastGuzo is a licensed Canadian immigration consultancy authorized by IRCC, providing expert visa applications, documentation guidance, and end-to-end support for students, families, and skilled migrants.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 transition-all hover:shadow-lg hover:scale-105">
             GET STARTED
