@@ -112,7 +112,7 @@ export default function Hero() {
               <div ref={imageRef} className="absolute inset-0 flex items-center justify-center z-20">
                 <div className="w-[110%] h-full overflow-visible">
                   <img
-                    src="/images/cert.jpg"
+                    src="/images/fastGuzoCert.png"
                     alt="Plane taking off scene"
                     className="w-full h-full object-contain object-center"
                     style={{
