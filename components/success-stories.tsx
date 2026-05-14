@@ -5,10 +5,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 const images = [
-  {
-    src: "/images/newFastGuzoImage/IMG_5188.JPEG",
-    alt: "FastGuzo Success Story - Happy Clients",
-  },
+
   {
     src: "/images/newFastGuzoImage/photo_2026-05-13_22-01-56.jpg",
     alt: "FastGuzo Success Story - Visa Approved",
@@ -86,28 +83,70 @@ export default function SuccessStories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-          {images.map((image, index) => (
-            <motion.div
-              key={index}
-              className="success-story-item relative group rounded-2xl overflow-hidden shadow-lg aspect-[9/16] bg-slate-200"
-              whileHover={{ y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
-                <p className="text-white font-medium px-4 text-center">
-                  Dream Achieved
+        {/* Unified Success Story Flow */}
+        <div className="max-w-7xl mx-auto relative z-10 pb-20 px-4">
+
+          <div className="bg-blue-600 rounded-[2.5rem] shadow-2xl overflow-hidden mb-20 border border-blue-500/20">
+            <div className="flex flex-col lg:flex-row items-stretch">
+              <div className="lg:w-1/2 p-10 md:p-16 flex flex-col justify-center text-white">
+                <div className="inline-flex items-center gap-3 mb-6">
+                  <span className="w-10 h-1 bg-white/40 rounded-full"></span>
+                  <span className="text-white/80 font-bold tracking-widest uppercase text-sm">Our Promise</span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">We Kept Our Word.</h3>
+                <p className="text-blue-50 text-lg md:text-xl leading-relaxed">
+                  At FastGuzo, our greatest pride is seeing our clients succeed. We promise transparent, reliable guidance, and these stories are a testament to our commitment. Your journey is our priority.
                 </p>
               </div>
-            </motion.div>
-          ))}
+
+              {/* The Anchor Image - Scaled up and filling the side fully */}
+              <div className="lg:w-1/2 relative min-h-[720px]">
+                <Image
+                  src="/images/newFastGuzoImage/IMG_5188.JPEG"
+                  alt="We Kept Our Word - FastGuzo Team"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* The Success Stories Aligned Equally */}
+          <div className="mt-8 border-t border-slate-100 pt-16">
+            <div className="text-center mb-12">
+              <h4 className="text-2xl font-bold text-slate-900 mb-2">Client Success Gallery</h4>
+              <p className="text-slate-500">A glimpse into the journeys we've been honored to support.</p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 pb-12">
+              {images.map((image, index) => {
+                return (
+                  <motion.div
+                    key={index}
+                    className="success-story-item relative group rounded-2xl overflow-hidden shadow-lg aspect-[4/5] bg-slate-100 border-4 border-white"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                      <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-white font-bold tracking-wide px-4">
+                          Dream Achieved
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>
