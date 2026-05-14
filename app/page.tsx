@@ -7,6 +7,7 @@ import GetToKnowUs from "@/components/get-to-know-us"
 import CompanyOverview from "@/components/company-overview"
 import Services from "@/components/services"
 import Testimonials from "@/components/testimonials"
+import SuccessStories from "@/components/success-stories"
 import Certification from "@/components/certification"
 import Articles from "@/components/articles"
 import About from "@/components/about"
@@ -22,6 +23,7 @@ export default function Home() {
       <Header />
       <FlagMarquee />
       <Hero />
+      <SuccessStories />
       <About />
       <PartnersSection />
       <Affiliations />
