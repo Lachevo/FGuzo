@@ -99,15 +99,12 @@ export default function SuccessStories() {
                 </p>
               </div>
 
-              {/* The Anchor Image - Scaled up and filling the side fully */}
-              <div className="lg:w-1/2 relative min-h-[720px]">
-                <Image
+              {/* The Anchor Image - Full-bleed portrait image */}
+              <div className="lg:w-1/2 bg-blue-600 overflow-hidden">
+                <img
                   src="/images/newFastGuzoImage/IMG_5188.JPEG"
                   alt="We Kept Our Word - FastGuzo Team"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
+                  className="w-full h-auto lg:h-full lg:object-cover block"
                 />
               </div>
             </div>
